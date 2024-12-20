@@ -1,0 +1,23 @@
+# config.txt for Raspberry Pi 1 A+ bare-metal kernel
+
+# Uncomment to enable serial console (if needed for debugging)
+# enable_uart=0
+
+# Disable HDMI output if you're not using it (to save power)
+hdmi_force_hotplug=0
+
+# Set up memory split between ARM and GPU
+gpu_mem=256   # Set the amount of memory allocated to the GPU (16MB)
+
+# Enable ARM core clock speed if needed (optional)
+# arm_freq=700  # Default is 700MHz (Raspberry Pi 1 A+)
+
+# Ensure the Pi boots from the right partition
+boot_delay=0  # 0 seconds delay
+
+# Tell the Raspberry Pi to load the kernel image from a specific location
+# The 'kernel.img' should be the image you generated with GCC
+kernel=kernel.img   # This points to your custom kernel image (e.g., your bare-metal kernel)
+
+# Uncomment this line if you need to disable the display
+# disable_splash=1  # Disable splash screen (optional, for a cleaner boot)

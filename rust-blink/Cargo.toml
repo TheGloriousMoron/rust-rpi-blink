@@ -1,0 +1,10 @@
+[package]
+name = "rust-blink"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+volatile = "*"
+
+[profile.release]
+panic = "abort"
